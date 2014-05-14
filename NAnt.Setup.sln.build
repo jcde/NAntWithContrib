@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<project default="build">
+
+	<include buildfile="${environment::get-variable('currentDeploy')}" />
+
+</project>

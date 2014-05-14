@@ -1,0 +1,808 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A73C7D55-55D5-4CF5-9F48-1A15F93507FD}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>NAntWithContrib</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>NAntWithContrib</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="bin\CollectionGen.dll" />
+    <Content Include="bin\extensions\common\2.0\NAnt.MSBuild.dll" />
+    <Content Include="bin\extensions\common\2.0\NAnt.MSBuild.xml" />
+    <Content Include="bin\Interop.MsmMergeTypeLib.dll" />
+    <Content Include="bin\Interop.StarTeam.dll" />
+    <Content Include="bin\Interop.WindowsInstaller.dll" />
+    <Content Include="bin\lib\common\neutral\ICSharpCode.SharpCvsLib.Console.dll" />
+    <Content Include="bin\lib\common\neutral\ICSharpCode.SharpCvsLib.dll" />
+    <Content Include="bin\lib\common\neutral\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="bin\lib\common\neutral\NUnitCore.dll" />
+    <Content Include="bin\lib\ICSharpCode.SharpCvsLib.Console.dll" />
+    <Content Include="bin\lib\ICSharpCode.SharpCvsLib.dll" />
+    <Content Include="bin\lib\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="bin\lib\mono\1.0\NDoc.Core.dll" />
+    <Content Include="bin\lib\mono\1.0\NDoc.Documenter.Msdn.dll" />
+    <Content Include="bin\lib\mono\1.0\NDoc.ExtendedUI.dll" />
+    <Content Include="bin\lib\mono\1.0\nunit.core.dll" />
+    <Content Include="bin\lib\mono\1.0\nunit.framework.dll" />
+    <Content Include="bin\lib\mono\1.0\nunit.util.dll" />
+    <Content Include="bin\lib\mono\2.0\NDoc.Core.dll" />
+    <Content Include="bin\lib\mono\2.0\NDoc.Documenter.Msdn.dll" />
+    <Content Include="bin\lib\mono\2.0\NDoc.ExtendedUI.dll" />
+    <Content Include="bin\lib\mono\2.0\nunit.core.dll" />
+    <Content Include="bin\lib\mono\2.0\nunit.framework.dll" />
+    <Content Include="bin\lib\mono\2.0\nunit.util.dll" />
+    <Content Include="bin\lib\net\1.0\NDoc.Core.dll" />
+    <Content Include="bin\lib\net\1.0\NDoc.Documenter.Msdn.dll" />
+    <Content Include="bin\lib\net\1.0\NDoc.ExtendedUI.dll" />
+    <Content Include="bin\lib\net\1.0\nunit.core.dll" />
+    <Content Include="bin\lib\net\1.0\nunit.framework.dll" />
+    <Content Include="bin\lib\net\1.0\nunit.util.dll" />
+    <Content Include="bin\lib\net\1.1\NDoc.Core.dll" />
+    <Content Include="bin\lib\net\1.1\NDoc.Documenter.Msdn.dll" />
+    <Content Include="bin\lib\net\1.1\NDoc.ExtendedUI.dll" />
+    <Content Include="bin\lib\net\1.1\nunit.core.dll" />
+    <Content Include="bin\lib\net\1.1\nunit.framework.dll" />
+    <Content Include="bin\lib\net\1.1\nunit.util.dll" />
+    <Content Include="bin\lib\net\2.0\NDoc.Core.dll" />
+    <Content Include="bin\lib\net\2.0\NDoc.Documenter.Msdn.dll" />
+    <Content Include="bin\lib\net\2.0\NDoc.ExtendedUI.dll" />
+    <Content Include="bin\lib\net\2.0\nunit.core.dll" />
+    <Content Include="bin\lib\net\2.0\nunit.framework.dll" />
+    <Content Include="bin\lib\net\2.0\nunit.util.dll" />
+    <Content Include="bin\lib\NUnitCore.dll" />
+    <Content Include="bin\log4net.dll" />
+    <Content Include="bin\NAnt.CompressionTasks.dll" />
+    <Content Include="bin\NAnt.CompressionTasks.xml" />
+    <Content Include="bin\NAnt.Contrib.Tasks.dll" />
+    <Content Include="bin\NAnt.Core.dll" />
+    <Content Include="bin\NAnt.Core.xml" />
+    <Content Include="bin\NAnt.DotNetTasks.dll" />
+    <Content Include="bin\NAnt.DotNetTasks.xml" />
+    <Content Include="bin\NAnt.exe" />
+    <Content Include="bin\NAnt.exe.config" />
+    <Content Include="bin\NAnt.MSNetTasks.dll" />
+    <Content Include="bin\NAnt.MSNetTasks.xml" />
+    <Content Include="bin\NAnt.NUnit.dll" />
+    <Content Include="bin\NAnt.NUnit.xml" />
+    <Content Include="bin\NAnt.NUnit1Tasks.dll" />
+    <Content Include="bin\NAnt.NUnit1Tasks.xml" />
+    <Content Include="bin\NAnt.NUnit2Tasks.dll" />
+    <Content Include="bin\NAnt.NUnit2Tasks.xml" />
+    <Content Include="bin\NAnt.Resources.dll" />
+    <Content Include="bin\NAnt.SourceControlTasks.dll" />
+    <Content Include="bin\NAnt.SourceControlTasks.xml" />
+    <Content Include="bin\NAnt.Utils.Tasks.dll" />
+    <Content Include="bin\NAnt.VisualCppTasks.dll" />
+    <Content Include="bin\NAnt.VisualCppTasks.xml" />
+    <Content Include="bin\NAnt.VSNetTasks.dll" />
+    <Content Include="bin\NAnt.VSNetTasks.xml" />
+    <Content Include="bin\NAnt.Win32Tasks.dll" />
+    <Content Include="bin\NAnt.Win32Tasks.xml" />
+    <Content Include="bin\NAnt.xml" />
+    <Content Include="bin\NDoc.Documenter.NAnt.dll" />
+    <Content Include="bin\scvs.exe" />
+    <Content Include="bin\SLiNgshoT.Core.dll" />
+    <Content Include="bin\SLiNgshoT.exe" />
+    <Content Include="bin\SourceSafe.Interop.dll" />
+    <Content Include="bin\tasks\net\MSITaskErrors.mst" />
+    <Content Include="bin\tasks\net\MSITaskTemplate.msi" />
+    <Content Include="bin\tasks\net\MSMTaskErrors.mst" />
+    <Content Include="bin\tasks\net\MSMTaskTemplate.msm" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.ADSIBaseTask.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.BizTalk.BizTalkBase.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.BizTalk.Orchestration.EnlistOrchestrationAction.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.BizTalk.Orchestration.OrchestrationActionBase.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.BizTalk.Orchestration.StartOrchestrationAction.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.BizTalk.Orchestration.StopOrchestrationAction.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.BizTalk.Orchestration.UnenlistOrchestrationAction.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.ClearCase.ClearCaseBase.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.GacTaskBase.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.Mks.BaseTask.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.Msi.InstallerTaskBase.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.NestedTaskContainer.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.Perforce.P4Base.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.PVCS.PVCSMultipleEntityTask.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.PVCS.PVCSProjectDatabaseTask.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.PVCS.PVCSSingleEntityTask.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.PVCS.PVCSTask.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.SchemaValidatedTask.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.SourceSafe.BaseTask.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.StarTeam.LabelTask.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.StarTeam.StarTeamTask.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.StarTeam.TreeBasedTask.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.SurroundSCM.SSCMTask.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.Svn.AbstractSvnTask.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.TryCatchTask.CatchElement.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.Web.WebBase.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.When.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Types.Assembly.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Types.AssemblySet.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Types.CodeStatsCount.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Types.Filter.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Types.GacReference.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Types.PVCS.Entity.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Types.SchemaElement.html" />
+    <Content Include="contrib-doc\help\elements\NAnt.Contrib.Types.XmlSchemaReference.html" />
+    <Content Include="contrib-doc\help\enums\NAnt.Contrib.Tasks.BizTalk.Host.HostAction.html" />
+    <Content Include="contrib-doc\help\enums\NAnt.Contrib.Tasks.BizTalk.Reset.ResetAction.html" />
+    <Content Include="contrib-doc\help\enums\NAnt.Contrib.Tasks.BizTalk.SendPort.SendPortAction.html" />
+    <Content Include="contrib-doc\help\enums\NAnt.Contrib.Tasks.GacTask.ActionTypes.html" />
+    <Content Include="contrib-doc\help\enums\NAnt.Contrib.Tasks.MsbuildTask.VerbosityLevel.html" />
+    <Content Include="contrib-doc\help\enums\NAnt.Contrib.Tasks.PVCS.PVCSAddFilesTask.PVCSCopyMode.html" />
+    <Content Include="contrib-doc\help\enums\NAnt.Contrib.Tasks.PVCS.PVCSUnlockTask.PVCSUnlockMode.html" />
+    <Content Include="contrib-doc\help\enums\NAnt.Contrib.Tasks.RecordTask.ActionType.html" />
+    <Content Include="contrib-doc\help\enums\NAnt.Contrib.Tasks.SchemeType.html" />
+    <Content Include="contrib-doc\help\enums\NAnt.Contrib.Tasks.SourceSafe.FileTimestamp.html" />
+    <Content Include="contrib-doc\help\enums\NAnt.Contrib.Tasks.VersionTask.BuildNumberAlgorithm.html" />
+    <Content Include="contrib-doc\help\enums\NAnt.Contrib.Tasks.VersionTask.RevisionNumberAlgorithm.html" />
+    <Content Include="contrib-doc\help\enums\NAnt.Contrib.Tasks.Web.ApplicationPool.ApplicationPoolAction.html" />
+    <Content Include="contrib-doc\help\enums\NAnt.Contrib.Tasks.Web.CreateVirtualDirectory.AppType.html" />
+    <Content Include="contrib-doc\help\enums\NAnt.Contrib.Types.ClearCase.TypeKind.html" />
+    <Content Include="contrib-doc\help\enums\NAnt.Contrib.Types.NUnit2Report.ReportFormat.html" />
+    <Content Include="contrib-doc\help\enums\NAnt.Contrib.Util.DelimiterStyle.html" />
+    <Content Include="contrib-doc\help\filters\index.html" />
+    <Content Include="contrib-doc\help\functions\fileset.get-file-count.html" />
+    <Content Include="contrib-doc\help\functions\fileset.has-files.html" />
+    <Content Include="contrib-doc\help\functions\fileset.to-string.html" />
+    <Content Include="contrib-doc\help\functions\index.html" />
+    <Content Include="contrib-doc\help\functions\service.get-display-name.html" />
+    <Content Include="contrib-doc\help\functions\service.get-service-name.html" />
+    <Content Include="contrib-doc\help\functions\service.get-status.html" />
+    <Content Include="contrib-doc\help\functions\service.is-installed.html" />
+    <Content Include="contrib-doc\help\functions\service.is-paused.html" />
+    <Content Include="contrib-doc\help\functions\service.is-running.html" />
+    <Content Include="contrib-doc\help\functions\service.is-stopped.html" />
+    <Content Include="contrib-doc\help\images\arrow.gif" />
+    <Content Include="contrib-doc\help\images\bullet.gif" />
+    <Content Include="contrib-doc\help\images\logo.gif" />
+    <Content Include="contrib-doc\help\index.html" />
+    <Content Include="contrib-doc\help\style.css" />
+    <Content Include="contrib-doc\help\tasks\adsigetprop.html" />
+    <Content Include="contrib-doc\help\tasks\adsisetprop.html" />
+    <Content Include="contrib-doc\help\tasks\astyle.html" />
+    <Content Include="contrib-doc\help\tasks\btsdeploy.html" />
+    <Content Include="contrib-doc\help\tasks\btsexport.html" />
+    <Content Include="contrib-doc\help\tasks\btshost.html" />
+    <Content Include="contrib-doc\help\tasks\btsimport.html" />
+    <Content Include="contrib-doc\help\tasks\btsorchestration.html" />
+    <Content Include="contrib-doc\help\tasks\btsreset.html" />
+    <Content Include="contrib-doc\help\tasks\btssendport.html" />
+    <Content Include="contrib-doc\help\tasks\btsunbind.html" />
+    <Content Include="contrib-doc\help\tasks\btsundeploy.html" />
+    <Content Include="contrib-doc\help\tasks\cccatcs.html" />
+    <Content Include="contrib-doc\help\tasks\cccheckin.html" />
+    <Content Include="contrib-doc\help\tasks\cccheckout.html" />
+    <Content Include="contrib-doc\help\tasks\cclock.html" />
+    <Content Include="contrib-doc\help\tasks\ccmkelem.html" />
+    <Content Include="contrib-doc\help\tasks\ccmklabel.html" />
+    <Content Include="contrib-doc\help\tasks\ccmklbtype.html" />
+    <Content Include="contrib-doc\help\tasks\ccrmtype.html" />
+    <Content Include="contrib-doc\help\tasks\ccuncheckout.html" />
+    <Content Include="contrib-doc\help\tasks\ccunlock.html" />
+    <Content Include="contrib-doc\help\tasks\ccupdate.html" />
+    <Content Include="contrib-doc\help\tasks\cd.html" />
+    <Content Include="contrib-doc\help\tasks\checksum.html" />
+    <Content Include="contrib-doc\help\tasks\choose.html" />
+    <Content Include="contrib-doc\help\tasks\codestats.html" />
+    <Content Include="contrib-doc\help\tasks\comregister.html" />
+    <Content Include="contrib-doc\help\tasks\concat.html" />
+    <Content Include="contrib-doc\help\tasks\deliisdir.html" />
+    <Content Include="contrib-doc\help\tasks\depends.html" />
+    <Content Include="contrib-doc\help\tasks\disco.html" />
+    <Content Include="contrib-doc\help\tasks\fxcop.html" />
+    <Content Include="contrib-doc\help\tasks\gac-install.html" />
+    <Content Include="contrib-doc\help\tasks\gac-uninstall.html" />
+    <Content Include="contrib-doc\help\tasks\gac.html" />
+    <Content Include="contrib-doc\help\tasks\grep.html" />
+    <Content Include="contrib-doc\help\tasks\hxcomp.html" />
+    <Content Include="contrib-doc\help\tasks\hxreg.html" />
+    <Content Include="contrib-doc\help\tasks\iisapppool.html" />
+    <Content Include="contrib-doc\help\tasks\iisdirinfo.html" />
+    <Content Include="contrib-doc\help\tasks\index.html" />
+    <Content Include="contrib-doc\help\tasks\iniread.html" />
+    <Content Include="contrib-doc\help\tasks\iniwrite.html" />
+    <Content Include="contrib-doc\help\tasks\mgmtclassgen.html" />
+    <Content Include="contrib-doc\help\tasks\mkiisdir.html" />
+    <Content Include="contrib-doc\help\tasks\mkschanges.html" />
+    <Content Include="contrib-doc\help\tasks\mkscheckpoint.html" />
+    <Content Include="contrib-doc\help\tasks\mksget.html" />
+    <Content Include="contrib-doc\help\tasks\msbuild.html" />
+    <Content Include="contrib-doc\help\tasks\msi.html" />
+    <Content Include="contrib-doc\help\tasks\msm.html" />
+    <Content Include="contrib-doc\help\tasks\ngen.html" />
+    <Content Include="contrib-doc\help\tasks\nunit2report.html" />
+    <Content Include="contrib-doc\help\tasks\nunitreport.html" />
+    <Content Include="contrib-doc\help\tasks\p4add.html" />
+    <Content Include="contrib-doc\help\tasks\p4change.html" />
+    <Content Include="contrib-doc\help\tasks\p4client.html" />
+    <Content Include="contrib-doc\help\tasks\p4delete.html" />
+    <Content Include="contrib-doc\help\tasks\p4edit.html" />
+    <Content Include="contrib-doc\help\tasks\p4info.html" />
+    <Content Include="contrib-doc\help\tasks\p4label.html" />
+    <Content Include="contrib-doc\help\tasks\p4labelsync.html" />
+    <Content Include="contrib-doc\help\tasks\p4print.html" />
+    <Content Include="contrib-doc\help\tasks\p4reopen.html" />
+    <Content Include="contrib-doc\help\tasks\p4revert.html" />
+    <Content Include="contrib-doc\help\tasks\p4set.html" />
+    <Content Include="contrib-doc\help\tasks\p4submit.html" />
+    <Content Include="contrib-doc\help\tasks\p4sync.html" />
+    <Content Include="contrib-doc\help\tasks\pvcsaddfiles.html" />
+    <Content Include="contrib-doc\help\tasks\pvcsadduser.html" />
+    <Content Include="contrib-doc\help\tasks\pvcsassigngroup.html" />
+    <Content Include="contrib-doc\help\tasks\pvcschangegroup.html" />
+    <Content Include="contrib-doc\help\tasks\pvcscreateproject.html" />
+    <Content Include="contrib-doc\help\tasks\pvcsdelete.html" />
+    <Content Include="contrib-doc\help\tasks\pvcsdeletegroup.html" />
+    <Content Include="contrib-doc\help\tasks\pvcsdeletelabel.html" />
+    <Content Include="contrib-doc\help\tasks\pvcsdeleteusers.html" />
+    <Content Include="contrib-doc\help\tasks\pvcsget.html" />
+    <Content Include="contrib-doc\help\tasks\pvcslabel.html" />
+    <Content Include="contrib-doc\help\tasks\pvcslock.html" />
+    <Content Include="contrib-doc\help\tasks\pvcspromotegroup.html" />
+    <Content Include="contrib-doc\help\tasks\pvcsput.html" />
+    <Content Include="contrib-doc\help\tasks\pvcsrenamelabel.html" />
+    <Content Include="contrib-doc\help\tasks\pvcsunlock.html" />
+    <Content Include="contrib-doc\help\tasks\record.html" />
+    <Content Include="contrib-doc\help\tasks\regasm.html" />
+    <Content Include="contrib-doc\help\tasks\scp.html" />
+    <Content Include="contrib-doc\help\tasks\slingshot.html" />
+    <Content Include="contrib-doc\help\tasks\sql.html" />
+    <Content Include="contrib-doc\help\tasks\sscmbatch.html" />
+    <Content Include="contrib-doc\help\tasks\sscmbranch.html" />
+    <Content Include="contrib-doc\help\tasks\sscmcheckin.html" />
+    <Content Include="contrib-doc\help\tasks\sscmcheckout.html" />
+    <Content Include="contrib-doc\help\tasks\sscmfreeze.html" />
+    <Content Include="contrib-doc\help\tasks\sscmget.html" />
+    <Content Include="contrib-doc\help\tasks\sscmlabel.html" />
+    <Content Include="contrib-doc\help\tasks\sscmunfreeze.html" />
+    <Content Include="contrib-doc\help\tasks\stautolabel.html" />
+    <Content Include="contrib-doc\help\tasks\stcheckin.html" />
+    <Content Include="contrib-doc\help\tasks\stcheckout.html" />
+    <Content Include="contrib-doc\help\tasks\stlabel.html" />
+    <Content Include="contrib-doc\help\tasks\stlist.html" />
+    <Content Include="contrib-doc\help\tasks\svn-checkout.html" />
+    <Content Include="contrib-doc\help\tasks\svn-update.html" />
+    <Content Include="contrib-doc\help\tasks\svn.html" />
+    <Content Include="contrib-doc\help\tasks\trycatch.html" />
+    <Content Include="contrib-doc\help\tasks\typedcollection.html" />
+    <Content Include="contrib-doc\help\tasks\validatexml.html" />
+    <Content Include="contrib-doc\help\tasks\vb6.html" />
+    <Content Include="contrib-doc\help\tasks\version.html" />
+    <Content Include="contrib-doc\help\tasks\vssadd.html" />
+    <Content Include="contrib-doc\help\tasks\vsscheckin.html" />
+    <Content Include="contrib-doc\help\tasks\vsscheckout.html" />
+    <Content Include="contrib-doc\help\tasks\vssdelete.html" />
+    <Content Include="contrib-doc\help\tasks\vssdiff.html" />
+    <Content Include="contrib-doc\help\tasks\vssget.html" />
+    <Content Include="contrib-doc\help\tasks\vsshistory.html" />
+    <Content Include="contrib-doc\help\tasks\vsslabel.html" />
+    <Content Include="contrib-doc\help\tasks\vssundocheckout.html" />
+    <Content Include="contrib-doc\help\tasks\wsdl.html" />
+    <Content Include="contrib-doc\help\tasks\xsd.html" />
+    <Content Include="contrib-doc\help\types\entities.html" />
+    <Content Include="contrib-doc\help\types\filterset.html" />
+    <Content Include="contrib-doc\help\types\index.html" />
+    <Content Include="contrib-doc\license.html" />
+    <Content Include="contrib-doc\releasenotes.html" />
+    <Content Include="COPYING.txt" />
+    <Content Include="doc\help\elements\NAnt.Core.DataTypeBase.html" />
+    <Content Include="doc\help\elements\NAnt.Core.Filters.ChainableReader.html" />
+    <Content Include="doc\help\elements\NAnt.Core.Filters.Filter.html" />
+    <Content Include="doc\help\elements\NAnt.Core.Filters.PhysicalTextReader.html" />
+    <Content Include="doc\help\elements\NAnt.Core.Target.html" />
+    <Content Include="doc\help\elements\NAnt.Core.Task.html" />
+    <Content Include="doc\help\elements\NAnt.Core.TaskContainer.html" />
+    <Content Include="doc\help\elements\NAnt.Core.Tasks.ExternalProgramBase.html" />
+    <Content Include="doc\help\elements\NAnt.Core.Tasks.InElement.html" />
+    <Content Include="doc\help\elements\NAnt.Core.Types.Argument.html" />
+    <Content Include="doc\help\elements\NAnt.Core.Types.EnvironmentSet.html" />
+    <Content Include="doc\help\elements\NAnt.Core.Types.EnvironmentVariable.html" />
+    <Content Include="doc\help\elements\NAnt.Core.Types.FileSet.Exclude.html" />
+    <Content Include="doc\help\elements\NAnt.Core.Types.FileSet.ExcludesFile.html" />
+    <Content Include="doc\help\elements\NAnt.Core.Types.FileSet.Include.html" />
+    <Content Include="doc\help\elements\NAnt.Core.Types.FileSet.IncludesFile.html" />
+    <Content Include="doc\help\elements\NAnt.Core.Types.Formatter.html" />
+    <Content Include="doc\help\elements\NAnt.Core.Types.Option.html" />
+    <Content Include="doc\help\elements\NAnt.Core.Types.PathElement.html" />
+    <Content Include="doc\help\elements\NAnt.Core.Types.Pattern.html" />
+    <Content Include="doc\help\elements\NAnt.Core.Types.RawXml.html" />
+    <Content Include="doc\help\elements\NAnt.Core.Types.Token.html" />
+    <Content Include="doc\help\elements\NAnt.Core.Types.XmlNamespace.html" />
+    <Content Include="doc\help\elements\NAnt.Core.Types.XsltExtensionObject.html" />
+    <Content Include="doc\help\elements\NAnt.Core.Types.XsltParameter.html" />
+    <Content Include="doc\help\elements\NAnt.DotNet.Tasks.CompilerBase.html" />
+    <Content Include="doc\help\elements\NAnt.DotNet.Types.AssemblyAttribute.html" />
+    <Content Include="doc\help\elements\NAnt.DotNet.Types.CompilerWarning.html" />
+    <Content Include="doc\help\elements\NAnt.DotNet.Types.DataTypeCollectionBase.html" />
+    <Content Include="doc\help\elements\NAnt.DotNet.Types.EmbeddedResourceCollection.html" />
+    <Content Include="doc\help\elements\NAnt.DotNet.Types.LibDirectorySet.html" />
+    <Content Include="doc\help\elements\NAnt.DotNet.Types.Module.html" />
+    <Content Include="doc\help\elements\NAnt.DotNet.Types.NamespaceImport.html" />
+    <Content Include="doc\help\elements\NAnt.DotNet.Types.Package.html" />
+    <Content Include="doc\help\elements\NAnt.NUnit.Types.FormatterElement.html" />
+    <Content Include="doc\help\elements\NAnt.NUnit1.Types.NUnitTest.html" />
+    <Content Include="doc\help\elements\NAnt.NUnit2.Types.Category.html" />
+    <Content Include="doc\help\elements\NAnt.NUnit2.Types.CategoryCollection.html" />
+    <Content Include="doc\help\elements\NAnt.NUnit2.Types.NUnit2Test.html" />
+    <Content Include="doc\help\elements\NAnt.SourceControl.Tasks.AbstractCvsTask.html" />
+    <Content Include="doc\help\elements\NAnt.SourceControl.Tasks.AbstractSourceControlTask.html" />
+    <Content Include="doc\help\elements\NAnt.VisualCpp.Types.Library.html" />
+    <Content Include="doc\help\elements\NAnt.VisualCpp.Types.Symbol.html" />
+    <Content Include="doc\help\elements\NAnt.VSNet.Types.WebMap.html" />
+    <Content Include="doc\help\enums\NAnt.Compression.Tasks.TarCompressionMethod.html" />
+    <Content Include="doc\help\enums\NAnt.Compression.Types.DuplicateHandling.html" />
+    <Content Include="doc\help\enums\NAnt.Core.Level.html" />
+    <Content Include="doc\help\enums\NAnt.Core.Tasks.AvailableTask.ResourceType.html" />
+    <Content Include="doc\help\enums\NAnt.Core.Tasks.LoopTask.LoopItem.html" />
+    <Content Include="doc\help\enums\NAnt.Core.Tasks.LoopTask.LoopTrim.html" />
+    <Content Include="doc\help\enums\NAnt.Core.Types.ManagedExecution.html" />
+    <Content Include="doc\help\enums\NAnt.DotNet.Tasks.AssemblyInfoTask.CodeLanguage.html" />
+    <Content Include="doc\help\enums\NAnt.DotNet.Tasks.RegsvcsTask.ActionType.html" />
+    <Content Include="doc\help\enums\NAnt.DotNet.Types.DebugOutput.html" />
+    <Content Include="doc\help\enums\NAnt.DotNet.Types.DelaySign.html" />
+    <Content Include="doc\help\enums\NAnt.MSNet.Tasks.ServiceControllerTask.ActionType.html" />
+    <Content Include="doc\help\enums\NAnt.NUnit.Types.FormatterType.html" />
+    <Content Include="doc\help\enums\NAnt.VisualCpp.Tasks.ClTask.PrecompiledHeaderMode.html" />
+    <Content Include="doc\help\enums\NAnt.VisualCpp.Types.CharacterSet.html" />
+    <Content Include="doc\help\filters\expandproperties.html" />
+    <Content Include="doc\help\filters\index.html" />
+    <Content Include="doc\help\filters\replacestring.html" />
+    <Content Include="doc\help\filters\replacetokens.html" />
+    <Content Include="doc\help\filters\tabstospaces.html" />
+    <Content Include="doc\help\functions\assembly.get-full-name.html" />
+    <Content Include="doc\help\functions\assembly.get-location.html" />
+    <Content Include="doc\help\functions\assembly.get-name.html" />
+    <Content Include="doc\help\functions\assembly.load-from-file.html" />
+    <Content Include="doc\help\functions\assembly.load.html" />
+    <Content Include="doc\help\functions\assemblyname.get-assembly-name.html" />
+    <Content Include="doc\help\functions\assemblyname.get-codebase.html" />
+    <Content Include="doc\help\functions\assemblyname.get-escaped-codebase.html" />
+    <Content Include="doc\help\functions\assemblyname.get-full-name.html" />
+    <Content Include="doc\help\functions\assemblyname.get-name.html" />
+    <Content Include="doc\help\functions\assemblyname.get-version.html" />
+    <Content Include="doc\help\functions\bool.parse.html" />
+    <Content Include="doc\help\functions\bool.to-string.html" />
+    <Content Include="doc\help\functions\convert.to-boolean.html" />
+    <Content Include="doc\help\functions\convert.to-datetime.html" />
+    <Content Include="doc\help\functions\convert.to-double.html" />
+    <Content Include="doc\help\functions\convert.to-int.html" />
+    <Content Include="doc\help\functions\convert.to-string.html" />
+    <Content Include="doc\help\functions\cygpath.get-dos-path.html" />
+    <Content Include="doc\help\functions\cygpath.get-unix-path.html" />
+    <Content Include="doc\help\functions\cygpath.get-windows-path.html" />
+    <Content Include="doc\help\functions\datetime.get-day-of-week.html" />
+    <Content Include="doc\help\functions\datetime.get-day-of-year.html" />
+    <Content Include="doc\help\functions\datetime.get-day.html" />
+    <Content Include="doc\help\functions\datetime.get-days-in-month.html" />
+    <Content Include="doc\help\functions\datetime.get-hour.html" />
+    <Content Include="doc\help\functions\datetime.get-millisecond.html" />
+    <Content Include="doc\help\functions\datetime.get-minute.html" />
+    <Content Include="doc\help\functions\datetime.get-month.html" />
+    <Content Include="doc\help\functions\datetime.get-second.html" />
+    <Content Include="doc\help\functions\datetime.get-ticks.html" />
+    <Content Include="doc\help\functions\datetime.get-year.html" />
+    <Content Include="doc\help\functions\datetime.is-leap-year.html" />
+    <Content Include="doc\help\functions\datetime.now.html" />
+    <Content Include="doc\help\functions\datetime.parse.html" />
+    <Content Include="doc\help\functions\datetime.to-string.html" />
+    <Content Include="doc\help\functions\directory.exists.html" />
+    <Content Include="doc\help\functions\directory.get-creation-time.html" />
+    <Content Include="doc\help\functions\directory.get-current-directory.html" />
+    <Content Include="doc\help\functions\directory.get-directory-root.html" />
+    <Content Include="doc\help\functions\directory.get-last-access-time.html" />
+    <Content Include="doc\help\functions\directory.get-last-write-time.html" />
+    <Content Include="doc\help\functions\directory.get-parent-directory.html" />
+    <Content Include="doc\help\functions\dns.get-host-name.html" />
+    <Content Include="doc\help\functions\double.parse.html" />
+    <Content Include="doc\help\functions\double.to-string.html" />
+    <Content Include="doc\help\functions\environment.get-folder-path.html" />
+    <Content Include="doc\help\functions\environment.get-machine-name.html" />
+    <Content Include="doc\help\functions\environment.get-operating-system.html" />
+    <Content Include="doc\help\functions\environment.get-user-name.html" />
+    <Content Include="doc\help\functions\environment.get-variable.html" />
+    <Content Include="doc\help\functions\environment.get-version.html" />
+    <Content Include="doc\help\functions\environment.variable-exists.html" />
+    <Content Include="doc\help\functions\file.exists.html" />
+    <Content Include="doc\help\functions\file.get-creation-time.html" />
+    <Content Include="doc\help\functions\file.get-last-access-time.html" />
+    <Content Include="doc\help\functions\file.get-last-write-time.html" />
+    <Content Include="doc\help\functions\file.get-length.html" />
+    <Content Include="doc\help\functions\file.is-assembly.html" />
+    <Content Include="doc\help\functions\file.up-to-date.html" />
+    <Content Include="doc\help\functions\fileversioninfo.get-company-name.html" />
+    <Content Include="doc\help\functions\fileversioninfo.get-file-version.html" />
+    <Content Include="doc\help\functions\fileversioninfo.get-product-name.html" />
+    <Content Include="doc\help\functions\fileversioninfo.get-product-version.html" />
+    <Content Include="doc\help\functions\fileversioninfo.get-version-info.html" />
+    <Content Include="doc\help\functions\framework.exists.html" />
+    <Content Include="doc\help\functions\framework.get-assembly-directory.html" />
+    <Content Include="doc\help\functions\framework.get-clr-version.html" />
+    <Content Include="doc\help\functions\framework.get-description.html" />
+    <Content Include="doc\help\functions\framework.get-family.html" />
+    <Content Include="doc\help\functions\framework.get-framework-directory.html" />
+    <Content Include="doc\help\functions\framework.get-runtime-engine.html" />
+    <Content Include="doc\help\functions\framework.get-runtime-framework.html" />
+    <Content Include="doc\help\functions\framework.get-sdk-directory.html" />
+    <Content Include="doc\help\functions\framework.get-target-framework.html" />
+    <Content Include="doc\help\functions\framework.get-tool-path.html" />
+    <Content Include="doc\help\functions\framework.get-version.html" />
+    <Content Include="doc\help\functions\framework.sdk-exists.html" />
+    <Content Include="doc\help\functions\index.html" />
+    <Content Include="doc\help\functions\int.parse.html" />
+    <Content Include="doc\help\functions\int.to-string.html" />
+    <Content Include="doc\help\functions\long.parse.html" />
+    <Content Include="doc\help\functions\long.to-string.html" />
+    <Content Include="doc\help\functions\math.abs.html" />
+    <Content Include="doc\help\functions\math.ceiling.html" />
+    <Content Include="doc\help\functions\math.floor.html" />
+    <Content Include="doc\help\functions\math.round.html" />
+    <Content Include="doc\help\functions\nant.get-assembly.html" />
+    <Content Include="doc\help\functions\nant.get-base-directory.html" />
+    <Content Include="doc\help\functions\operating-system.get-platform.html" />
+    <Content Include="doc\help\functions\operating-system.get-version.html" />
+    <Content Include="doc\help\functions\operating-system.to-string.html" />
+    <Content Include="doc\help\functions\path.change-extension.html" />
+    <Content Include="doc\help\functions\path.combine.html" />
+    <Content Include="doc\help\functions\path.get-directory-name.html" />
+    <Content Include="doc\help\functions\path.get-extension.html" />
+    <Content Include="doc\help\functions\path.get-file-name-without-extension.html" />
+    <Content Include="doc\help\functions\path.get-file-name.html" />
+    <Content Include="doc\help\functions\path.get-full-path.html" />
+    <Content Include="doc\help\functions\path.get-path-root.html" />
+    <Content Include="doc\help\functions\path.get-temp-file-name.html" />
+    <Content Include="doc\help\functions\path.get-temp-path.html" />
+    <Content Include="doc\help\functions\path.has-extension.html" />
+    <Content Include="doc\help\functions\path.is-path-rooted.html" />
+    <Content Include="doc\help\functions\pkg-config.exists.html" />
+    <Content Include="doc\help\functions\pkg-config.get-compile-flags.html" />
+    <Content Include="doc\help\functions\pkg-config.get-link-flags.html" />
+    <Content Include="doc\help\functions\pkg-config.get-mod-version.html" />
+    <Content Include="doc\help\functions\pkg-config.get-variable.html" />
+    <Content Include="doc\help\functions\pkg-config.is-atleast-version.html" />
+    <Content Include="doc\help\functions\pkg-config.is-between-version.html" />
+    <Content Include="doc\help\functions\pkg-config.is-exact-version.html" />
+    <Content Include="doc\help\functions\pkg-config.is-max-version.html" />
+    <Content Include="doc\help\functions\platform.get-name.html" />
+    <Content Include="doc\help\functions\platform.is-unix.html" />
+    <Content Include="doc\help\functions\platform.is-win32.html" />
+    <Content Include="doc\help\functions\project.get-base-directory.html" />
+    <Content Include="doc\help\functions\project.get-buildfile-path.html" />
+    <Content Include="doc\help\functions\project.get-buildfile-uri.html" />
+    <Content Include="doc\help\functions\project.get-default-target.html" />
+    <Content Include="doc\help\functions\project.get-name.html" />
+    <Content Include="doc\help\functions\property.exists.html" />
+    <Content Include="doc\help\functions\property.get-value.html" />
+    <Content Include="doc\help\functions\property.is-dynamic.html" />
+    <Content Include="doc\help\functions\property.is-readonly.html" />
+    <Content Include="doc\help\functions\string.contains.html" />
+    <Content Include="doc\help\functions\string.ends-with.html" />
+    <Content Include="doc\help\functions\string.get-length.html" />
+    <Content Include="doc\help\functions\string.index-of.html" />
+    <Content Include="doc\help\functions\string.last-index-of.html" />
+    <Content Include="doc\help\functions\string.pad-left.html" />
+    <Content Include="doc\help\functions\string.pad-right.html" />
+    <Content Include="doc\help\functions\string.replace.html" />
+    <Content Include="doc\help\functions\string.starts-with.html" />
+    <Content Include="doc\help\functions\string.substring.html" />
+    <Content Include="doc\help\functions\string.to-lower.html" />
+    <Content Include="doc\help\functions\string.to-upper.html" />
+    <Content Include="doc\help\functions\string.trim-end.html" />
+    <Content Include="doc\help\functions\string.trim-start.html" />
+    <Content Include="doc\help\functions\string.trim.html" />
+    <Content Include="doc\help\functions\target.exists.html" />
+    <Content Include="doc\help\functions\target.get-current-target.html" />
+    <Content Include="doc\help\functions\target.has-executed.html" />
+    <Content Include="doc\help\functions\task.exists.html" />
+    <Content Include="doc\help\functions\task.get-assembly.html" />
+    <Content Include="doc\help\functions\timespan.from-days.html" />
+    <Content Include="doc\help\functions\timespan.from-hours.html" />
+    <Content Include="doc\help\functions\timespan.from-milliseconds.html" />
+    <Content Include="doc\help\functions\timespan.from-minutes.html" />
+    <Content Include="doc\help\functions\timespan.from-seconds.html" />
+    <Content Include="doc\help\functions\timespan.from-ticks.html" />
+    <Content Include="doc\help\functions\timespan.get-days.html" />
+    <Content Include="doc\help\functions\timespan.get-hours.html" />
+    <Content Include="doc\help\functions\timespan.get-milliseconds.html" />
+    <Content Include="doc\help\functions\timespan.get-minutes.html" />
+    <Content Include="doc\help\functions\timespan.get-seconds.html" />
+    <Content Include="doc\help\functions\timespan.get-ticks.html" />
+    <Content Include="doc\help\functions\timespan.get-total-days.html" />
+    <Content Include="doc\help\functions\timespan.get-total-hours.html" />
+    <Content Include="doc\help\functions\timespan.get-total-milliseconds.html" />
+    <Content Include="doc\help\functions\timespan.get-total-minutes.html" />
+    <Content Include="doc\help\functions\timespan.get-total-seconds.html" />
+    <Content Include="doc\help\functions\timespan.parse.html" />
+    <Content Include="doc\help\functions\timespan.to-string.html" />
+    <Content Include="doc\help\functions\version.get-build.html" />
+    <Content Include="doc\help\functions\version.get-major.html" />
+    <Content Include="doc\help\functions\version.get-minor.html" />
+    <Content Include="doc\help\functions\version.get-revision.html" />
+    <Content Include="doc\help\functions\version.parse.html" />
+    <Content Include="doc\help\functions\version.to-string.html" />
+    <Content Include="doc\help\fundamentals\buildfiles.html" />
+    <Content Include="doc\help\fundamentals\expressions.html" />
+    <Content Include="doc\help\fundamentals\functions.html" />
+    <Content Include="doc\help\fundamentals\index.html" />
+    <Content Include="doc\help\fundamentals\listeners.html" />
+    <Content Include="doc\help\fundamentals\projects.html" />
+    <Content Include="doc\help\fundamentals\properties.html" />
+    <Content Include="doc\help\fundamentals\running-nant.html" />
+    <Content Include="doc\help\fundamentals\targets.html" />
+    <Content Include="doc\help\fundamentals\tasks.html" />
+    <Content Include="doc\help\images\arrow.gif" />
+    <Content Include="doc\help\images\bullet.gif" />
+    <Content Include="doc\help\images\logo.gif" />
+    <Content Include="doc\help\index.html" />
+    <Content Include="doc\help\introduction\fog0000000006.html" />
+    <Content Include="doc\help\introduction\fog0000000041.html" />
+    <Content Include="doc\help\introduction\fog0000000042.html" />
+    <Content Include="doc\help\introduction\fog0000000079.html" />
+    <Content Include="doc\help\introduction\fog0000000081.html" />
+    <Content Include="doc\help\introduction\getting-started.gif" />
+    <Content Include="doc\help\introduction\index.html" />
+    <Content Include="doc\help\introduction\installation.html" />
+    <Content Include="doc\help\style.css" />
+    <Content Include="doc\help\tasks\al.html" />
+    <Content Include="doc\help\tasks\asminfo.html" />
+    <Content Include="doc\help\tasks\attrib.html" />
+    <Content Include="doc\help\tasks\available.html" />
+    <Content Include="doc\help\tasks\aximp.html" />
+    <Content Include="doc\help\tasks\call.html" />
+    <Content Include="doc\help\tasks\cl.html" />
+    <Content Include="doc\help\tasks\copy.html" />
+    <Content Include="doc\help\tasks\csc.html" />
+    <Content Include="doc\help\tasks\cvs-changelog.html" />
+    <Content Include="doc\help\tasks\cvs-checkout.html" />
+    <Content Include="doc\help\tasks\cvs-export.html" />
+    <Content Include="doc\help\tasks\cvs-pass.html" />
+    <Content Include="doc\help\tasks\cvs-rtag.html" />
+    <Content Include="doc\help\tasks\cvs-tag.html" />
+    <Content Include="doc\help\tasks\cvs-update.html" />
+    <Content Include="doc\help\tasks\cvs.html" />
+    <Content Include="doc\help\tasks\delay-sign.html" />
+    <Content Include="doc\help\tasks\delete.html" />
+    <Content Include="doc\help\tasks\description.html" />
+    <Content Include="doc\help\tasks\echo.html" />
+    <Content Include="doc\help\tasks\exec.html" />
+    <Content Include="doc\help\tasks\fail.html" />
+    <Content Include="doc\help\tasks\foreach.html" />
+    <Content Include="doc\help\tasks\get.html" />
+    <Content Include="doc\help\tasks\gunzip.html" />
+    <Content Include="doc\help\tasks\if.html" />
+    <Content Include="doc\help\tasks\ifnot.html" />
+    <Content Include="doc\help\tasks\ilasm.html" />
+    <Content Include="doc\help\tasks\ildasm.html" />
+    <Content Include="doc\help\tasks\include.html" />
+    <Content Include="doc\help\tasks\index.html" />
+    <Content Include="doc\help\tasks\jsc.html" />
+    <Content Include="doc\help\tasks\lib.html" />
+    <Content Include="doc\help\tasks\license.html" />
+    <Content Include="doc\help\tasks\link.html" />
+    <Content Include="doc\help\tasks\loadfile.html" />
+    <Content Include="doc\help\tasks\loadtasks.html" />
+    <Content Include="doc\help\tasks\mail.html" />
+    <Content Include="doc\help\tasks\mc.html" />
+    <Content Include="doc\help\tasks\midl.html" />
+    <Content Include="doc\help\tasks\mkdir.html" />
+    <Content Include="doc\help\tasks\move.html" />
+    <Content Include="doc\help\tasks\nant.html" />
+    <Content Include="doc\help\tasks\nantschema.html" />
+    <Content Include="doc\help\tasks\ndoc.html" />
+    <Content Include="doc\help\tasks\nunit.html" />
+    <Content Include="doc\help\tasks\nunit2.html" />
+    <Content Include="doc\help\tasks\property.html" />
+    <Content Include="doc\help\tasks\rc.html" />
+    <Content Include="doc\help\tasks\readregistry.html" />
+    <Content Include="doc\help\tasks\regasm.html" />
+    <Content Include="doc\help\tasks\regex.html" />
+    <Content Include="doc\help\tasks\regsvcs.html" />
+    <Content Include="doc\help\tasks\resgen.html" />
+    <Content Include="doc\help\tasks\script.html" />
+    <Content Include="doc\help\tasks\servicecontroller.html" />
+    <Content Include="doc\help\tasks\setenv.html" />
+    <Content Include="doc\help\tasks\sleep.html" />
+    <Content Include="doc\help\tasks\solution.html" />
+    <Content Include="doc\help\tasks\style.html" />
+    <Content Include="doc\help\tasks\sysinfo.html" />
+    <Content Include="doc\help\tasks\tar.html" />
+    <Content Include="doc\help\tasks\tlbexp.html" />
+    <Content Include="doc\help\tasks\tlbimp.html" />
+    <Content Include="doc\help\tasks\touch.html" />
+    <Content Include="doc\help\tasks\tstamp.html" />
+    <Content Include="doc\help\tasks\unzip.html" />
+    <Content Include="doc\help\tasks\uptodate.html" />
+    <Content Include="doc\help\tasks\vbc.html" />
+    <Content Include="doc\help\tasks\vjc.html" />
+    <Content Include="doc\help\tasks\xmlpeek.html" />
+    <Content Include="doc\help\tasks\xmlpoke.html" />
+    <Content Include="doc\help\tasks\zip.html" />
+    <Content Include="doc\help\types\assemblyfileset.html" />
+    <Content Include="doc\help\types\categories.html" />
+    <Content Include="doc\help\types\categoryset.html" />
+    <Content Include="doc\help\types\credential.html" />
+    <Content Include="doc\help\types\cvsfileset.html" />
+    <Content Include="doc\help\types\dirset.html" />
+    <Content Include="doc\help\types\fileset.html" />
+    <Content Include="doc\help\types\filterchain.html" />
+    <Content Include="doc\help\types\index.html" />
+    <Content Include="doc\help\types\moduleset.html" />
+    <Content Include="doc\help\types\namespaceimports.html" />
+    <Content Include="doc\help\types\path.html" />
+    <Content Include="doc\help\types\patternset.html" />
+    <Content Include="doc\help\types\proxy.html" />
+    <Content Include="doc\help\types\resourcefileset.html" />
+    <Content Include="doc\help\types\tarfileset.html" />
+    <Content Include="doc\help\types\warnaserror.html" />
+    <Content Include="doc\help\types\zipfileset.html" />
+    <Content Include="doc\license.html" />
+    <Content Include="doc\releasenotes.html" />
+    <Content Include="examples\examples.build" />
+    <Content Include="examples\Filters\ReplaceCharacter\default.build" />
+    <Content Include="examples\Filters\ReplaceCharacter\ReplaceCharacter.cs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="examples\HelloWindowsForms\HelloWindowsForms.build" />
+    <Content Include="examples\HelloWindowsForms\HelloWindowsForms.vbproj" />
+    <Content Include="examples\HelloWindowsForms\MainForm.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="examples\HelloWindowsForms\MainForm.vb" />
+    <Content Include="examples\HelloWorld\default.build" />
+    <Content Include="examples\HelloWorld\HelloWorld.cs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="examples\HelloWorld\HelloWorld.js" />
+    <Content Include="examples\HelloWorld\HelloWorld.vb" />
+    <Content Include="examples\HelloWorld\ReplaceCharacter.cs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="examples\ScriptTask\script-sample.build" />
+    <Content Include="examples\Simple\Simple.build" />
+    <Content Include="examples\Simple\Simple.cs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="examples\Solution\cpp\WinForms\app.ico" />
+    <Content Include="examples\Solution\cpp\WinForms\app.rc" />
+    <Content Include="examples\Solution\cpp\WinForms\AssemblyInfo.cpp" />
+    <Content Include="examples\Solution\cpp\WinForms\cpp.build" />
+    <Content Include="examples\Solution\cpp\WinForms\Form1.cpp" />
+    <Content Include="examples\Solution\cpp\WinForms\Form1.h" />
+    <Content Include="examples\Solution\cpp\WinForms\Form1.resX">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="examples\Solution\cpp\WinForms\ReadMe.txt" />
+    <Content Include="examples\Solution\cpp\WinForms\resource.h" />
+    <Content Include="examples\Solution\cpp\WinForms\stdafx.cpp" />
+    <Content Include="examples\Solution\cpp\WinForms\stdafx.h" />
+    <Content Include="examples\Solution\cpp\WinForms\WinForms.sln" />
+    <Content Include="examples\Solution\cpp\WinForms\WinForms.vcproj" />
+    <Content Include="examples\Solution\cs\WinForms\App.ico" />
+    <Content Include="examples\Solution\cs\WinForms\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="examples\Solution\cs\WinForms\cs.build" />
+    <Content Include="examples\Solution\cs\WinForms\Form1.cs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="examples\Solution\cs\WinForms\WinForms.csproj" />
+    <Content Include="examples\Solution\cs\WinForms\WinForms.sln" />
+    <Content Include="examples\Solution\vb\WinForms\AssemblyInfo.vb" />
+    <Content Include="examples\Solution\vb\WinForms\Form1.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="examples\Solution\vb\WinForms\Form1.vb" />
+    <Content Include="examples\Solution\vb\WinForms\vb.build" />
+    <Content Include="examples\Solution\vb\WinForms\WinForms.sln" />
+    <Content Include="examples\Solution\vb\WinForms\WinForms.vbproj" />
+    <Content Include="examples\Solution\vjs\WinForms\AssemblyInfo.jsl" />
+    <Content Include="examples\Solution\vjs\WinForms\Form1.jsl" />
+    <Content Include="examples\Solution\vjs\WinForms\Form1.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="examples\Solution\vjs\WinForms\vjs.build" />
+    <Content Include="examples\Solution\vjs\WinForms\WinForms.sln" />
+    <Content Include="examples\Solution\vjs\WinForms\WinForms.vjsproj" />
+    <Content Include="examples\StyleTask\SimpleExtensionObject\circle.xsl" />
+    <Content Include="examples\StyleTask\SimpleExtensionObject\circles.xml" />
+    <Content Include="examples\StyleTask\SimpleExtensionObject\SimpleExtension.build" />
+    <Content Include="examples\StyleTask\SimpleExtensionObject\SimpleExtension.cs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="examples\StyleTask\SimpleExtensionObject\SimpleExtension.dll" />
+    <Content Include="examples\UserTask\default.build" />
+    <Content Include="examples\UserTask\UserTask.cs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="README.txt" />
+    <Content Include="schema\nant.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="doc\sdk\NAnt-SDK.chm" />
+    <None Include="examples\Solution\cpp\default.build" />
+    <None Include="examples\Solution\cs\default.build" />
+    <None Include="examples\Solution\vb\default.build" />
+    <None Include="examples\Solution\vjs\default.build" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="examples\Solution\cs\WinForms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
