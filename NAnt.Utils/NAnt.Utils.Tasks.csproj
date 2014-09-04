@@ -112,7 +112,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Windows\AddAccessRuleTask.cs" />
     <Compile Include="Windows\AddUserToGroupTask.cs" />
     <Compile Include="Windows\ATAddJobTask.cs" />
     <Compile Include="Windows\ATDelJobTask.cs" />
@@ -121,7 +120,6 @@
     <Compile Include="Windows\DeleteRegistry.cs" />
     <Compile Include="Windows\KillProcessTask.cs" />
     <Compile Include="Windows\MsiExecTask.cs" />
-    <Compile Include="Windows\RemoveAccessRuleTask.cs" />
     <Compile Include="Windows\RemoveUserFromGroupTask.cs" />
     <Compile Include="Windows\Types\ATDailyTriggerElement.cs" />
     <Compile Include="Windows\Types\ATMonthlyDOWTriggerElement.cs" />
