@@ -157,6 +157,7 @@
     <Content Include="bin\tasks\net\MSITaskTemplate.msi" />
     <Content Include="bin\tasks\net\MSMTaskErrors.mst" />
     <Content Include="bin\tasks\net\MSMTaskTemplate.msm" />
+    <Content Include="bin\TaskScheduler.dll" />
     <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.ADSIBaseTask.html" />
     <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.BizTalk.BizTalkBase.html" />
     <Content Include="contrib-doc\help\elements\NAnt.Contrib.Tasks.BizTalk.Orchestration.EnlistOrchestrationAction.html" />
