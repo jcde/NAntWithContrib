@@ -1,7 +1,7 @@
 ﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
-    <ProductVersion>8.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{8FFF06DC-F74C-4354-9846-8687E7B41E38}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -75,17 +75,14 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net">
-      <Name>log4net</Name>
-      <HintPath>..\..\Framework\log4net.DLL</HintPath>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NAntWithContrib\bin\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="NAnt.Core">
-      <Name>NAnt.Core</Name>
-      <HintPath>..\..\Framework\NAnt.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <Name>nunit.framework</Name>
-      <HintPath>..\..\Framework\nunit.framework.dll</HintPath>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="NAnt.Core, Version=0.92.4543.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NAntWithContrib\bin\NAnt.Core.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
@@ -93,8 +90,14 @@
     <Reference Include="System.Data">
       <Name>System.Data</Name>
     </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Xml">
       <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="TaskScheduler, Version=1.3.2889.25680, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NAntWithContrib\bin\TaskScheduler.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -104,15 +107,48 @@
     <Compile Include="PathAbsolute2Relative.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AddAccessRuleTask.cs" />
+    <Compile Include="Windows\AddUserToGroupTask.cs" />
+    <Compile Include="Windows\ATAddJobTask.cs" />
+    <Compile Include="Windows\ATDelJobTask.cs" />
+    <Compile Include="Windows\BaseAccessRuleTask.cs" />
+    <Compile Include="Windows\BaseATTask.cs" />
+    <Compile Include="Windows\DeleteRegistry.cs" />
+    <Compile Include="Windows\KillProcessTask.cs" />
+    <Compile Include="Windows\MsiExecTask.cs" />
+    <Compile Include="Windows\RemoveAccessRuleTask.cs" />
+    <Compile Include="Windows\RemoveUserFromGroupTask.cs" />
+    <Compile Include="Windows\Types\ATDailyTriggerElement.cs" />
+    <Compile Include="Windows\Types\ATMonthlyDOWTriggerElement.cs" />
+    <Compile Include="Windows\Types\ATMonthlyTriggerElement.cs" />
+    <Compile Include="Windows\Types\ATOnIdleTriggerElement.cs" />
+    <Compile Include="Windows\Types\ATOnLogonTriggerElement.cs" />
+    <Compile Include="Windows\Types\ATOnSystemStartTriggerElement.cs" />
+    <Compile Include="Windows\Types\ATRunOnceTriggerElement.cs" />
+    <Compile Include="Windows\Types\ATStartableTriggerElement.cs" />
+    <Compile Include="Windows\Types\ATTriggerElement.cs" />
+    <Compile Include="Windows\Types\ATTriggersCollectionElement.cs" />
+    <Compile Include="Windows\Types\ATWeeklyTriggerElement.cs" />
+    <Compile Include="Windows\WriteRegistryTask.cs" />
     <Compile Include="XmlListTask.cs">
       <SubType>Code</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>copy $(TargetPath) $(SolutionDir)NAntWithContrib\bin</PostBuildEvent>
   </PropertyGroup>
 </Project>

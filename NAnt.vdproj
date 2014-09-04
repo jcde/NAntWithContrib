@@ -21,18 +21,18 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_D1581BAC4CC7E3B70C44C98440EDADF6"
+        "OwnerKey" = "8:_8F530C3643364C8CBB52BD544AF8744A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_E59CC74B354941FCB607F7D4737B5C52"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_F03F588CD60BD3B790C559A1D7A8EC1E"
-        "OwnerKey" = "8:_8F530C3643364C8CBB52BD544AF8744A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_8F530C3643364C8CBB52BD544AF8744A"
         "MsmSig" = "8:_UNDEFINED"
@@ -40,7 +40,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F03F588CD60BD3B790C559A1D7A8EC1E"
+        "OwnerKey" = "8:_D1581BAC4CC7E3B70C44C98440EDADF6"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -159,34 +159,14 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E59CC74B354941FCB607F7D4737B5C52"
-            {
-            "SourcePath" = "8:Nant.bat"
-            "TargetName" = "8:Nant.bat"
-            "Tag" = "8:"
-            "Folder" = "8:_544A5295F541494D9F661CA3A34F6F43"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F03F588CD60BD3B790C559A1D7A8EC1E"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D1581BAC4CC7E3B70C44C98440EDADF6"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821"
                 "ScatterAssemblies"
                 {
-                    "_F03F588CD60BD3B790C559A1D7A8EC1E"
+                    "_D1581BAC4CC7E3B70C44C98440EDADF6"
                     {
                     "Name" = "8:log4net.DLL"
                     "Attributes" = "3:512"
@@ -208,6 +188,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E59CC74B354941FCB607F7D4737B5C52"
+            {
+            "SourcePath" = "8:Nant.bat"
+            "TargetName" = "8:Nant.bat"
+            "Tag" = "8:"
+            "Folder" = "8:_544A5295F541494D9F661CA3A34F6F43"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
@@ -406,13 +406,13 @@
         "PackageCode" = "8:{28760DBC-27B2-41D1-B4B6-AB3EC9F23751}"
         "UpgradeCode" = "8:{F87ABB3D-A5C0-46B8-AA3D-F9E8333DA199}"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
         "ProductVersion" = "8:0.92"
-        "Manufacturer" = "8:NAnt"
+        "Manufacturer" = "8:NumSite"
         "ARPHELPTELEPHONE" = "8:"
-        "ARPHELPLINK" = "8:www.numsite.org.ua"
+        "ARPHELPLINK" = "8:https://github.com/jcde/NAntWithContrib"
         "Title" = "8:NAnt"
         "Subject" = "8:"
         "ARPCONTACT" = "8:NumSite"

@@ -52,6 +52,3 @@ using System.Reflection;
 //   (*) Delay Signing is an advanced option - see the Microsoft .NET Framework
 //       documentation for more information on this.
 //
-[assembly : AssemblyDelaySign(true)]
-[assembly : AssemblyKeyFile(@"../../../../Configuration/Keys/numsite.snk")]
-[assembly : AssemblyKeyName("")]

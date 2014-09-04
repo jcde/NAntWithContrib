@@ -5,7 +5,11 @@ using System.Text;
 using NAnt.Core;
 using NAnt.Core.Attributes;
 
-using NUnit.Framework;
+#if UNIT_TESTS 
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Test = Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute;
+using TestFixture = Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute;
+#endif 
 
 namespace NAnt.Utils.Tasks
 {
