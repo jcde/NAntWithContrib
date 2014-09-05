@@ -1,5 +1,0 @@
-<?xml version="1.0" ?>
-<product name="NAnt.Setup" major="2" minor="0" build="0" revision="0" >
-	<usesProduct name="Microsoft .Net Framework" major="2" minor="0" />
-	<usesProduct name="NAnt.Utils" major="1" minor="0" />
-</product>
