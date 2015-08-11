@@ -81,6 +81,12 @@
     <Content Include="bin\Interop.MsmMergeTypeLib.dll" />
     <Content Include="bin\Interop.StarTeam.dll" />
     <Content Include="bin\Interop.WindowsInstaller.dll" />
+    <Content Include="bin\lib\common\2.0\nunit-console-runner.dll" />
+    <Content Include="bin\lib\common\2.0\nunit-console.exe" />
+    <Content Include="bin\lib\common\2.0\nunit.core.dll" />
+    <Content Include="bin\lib\common\2.0\nunit.core.interfaces.dll" />
+    <Content Include="bin\lib\common\2.0\nunit.framework.dll" />
+    <Content Include="bin\lib\common\2.0\nunit.util.dll" />
     <Content Include="bin\lib\common\neutral\ICSharpCode.SharpCvsLib.Console.dll" />
     <Content Include="bin\lib\common\neutral\ICSharpCode.SharpCvsLib.dll" />
     <Content Include="bin\lib\common\neutral\ICSharpCode.SharpZipLib.dll" />
@@ -787,6 +793,7 @@
     <Content Include="schema\nant.xsd" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\lib\common\2.0\nunit-console.exe.config" />
     <None Include="doc\sdk\NAnt-SDK.chm" />
     <None Include="examples\Solution\cpp\default.build" />
     <None Include="examples\Solution\cs\default.build" />
