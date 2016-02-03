@@ -6,9 +6,7 @@ using NAnt.Core;
 using NAnt.Core.Attributes;
 
 #if UNIT_TESTS 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Test = Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute;
-using TestFixture = Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute;
+using NUnit.Framework;
 #endif 
 
 namespace NAnt.Utils.Tasks
